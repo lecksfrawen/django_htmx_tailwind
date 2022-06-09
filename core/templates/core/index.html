@@ -11,6 +11,14 @@
         <title>Document</title>
     </head>
     <body>
-        <div class="py-4 m-10 bg-red-500 p10 rounded-xl">Blue</div>
+        <div class="py-4 m-10 bg-red-500 p10 rounded-xl">red</div>
+        <div class="py-4 m-10 bg-blue-500 p10 rounded-xl">Blue</div>
+        <div class="py-4 m-10 bg-green-500 p10 rounded-xl">green</div>
+        <div class="py-4 m-10 bg-purple-500 p10 rounded-xl">purple</div>
+        <div class="py-4 m-10 bg-yellow-500 p10 rounded-xl">yellow</div>
+
+        <div hx-get="/admin/" hx-swap="outerHTML">ADMIN</div>
+
+        <script src="{% static 'js/htmx.min.js' %}"></script>
     </body>
 </html>
