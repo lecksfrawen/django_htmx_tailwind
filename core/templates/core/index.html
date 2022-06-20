@@ -11,8 +11,7 @@
         <title>Document</title>
     </head>
     
-    <body class="bg-white dark:bg-black transition-colors duration-300">
-        
+    <body class="bg-white dark:bg-black transition-colors duration-300 py-6">        
             <button
                 class="absolute top-5 right-5 w-10 h-5 md:w-12 md:h-6 rounded-2xl bg-white flex items-center transition duration-300 focus:outline-none shadow"
                 onclick="toggleTheme()">
@@ -25,11 +24,11 @@
                 </div>
             </button>  
             <script src="{% static 'js/main.js' %}"></script> 
-            <div class="py-4 m-10 bg-red-500 p10 rounded-xl dark:bg-red-900 dark:text-white">red</div>
-            <div class="py-4 m-10 bg-blue-500 p10 rounded-xl dark:bg-blue-900 dark:text-white">Blue</div>
-            <div class="py-4 m-10 bg-green-500 p10 rounded-xl dark:bg-green-900 dark:text-white">green</div>
-            <div class="py-4 m-10 bg-purple-500 p10 rounded-xl dark:bg-purple-900 dark:text-white">purple</div>
-            <div class="py-4 m-10 bg-yellow-500 p10 rounded-xl dark:bg-yellow-900 dark:text-white">yellow</div>
+            <div class="px-4 py-4 m-10 bg-red-500 p10 rounded-xl dark:bg-red-900 dark:text-white text-center">Red</div>
+            <div class="px-4 py-4 m-10 bg-blue-500 p10 rounded-xl dark:bg-blue-900 dark:text-white text-center">Blue</div>
+            <div class="px-4 py-4 m-10 bg-green-500 p10 rounded-xl dark:bg-green-900 dark:text-white text-center">Green</div>
+            <div class="px-4 py-4 m-10 bg-purple-500 p10 rounded-xl dark:bg-purple-900 dark:text-white text-center">Purple</div>
+            <div class="px-4 py-4 m-10 bg-yellow-500 p10 rounded-xl dark:bg-orange-500 dark:text-white text-center">Yellow</div>
 
             <div hx-get="/admin/" hx-swap="outerHTML">ADMIN</div>
 
