@@ -10,7 +10,32 @@
         <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
         <title>Document</title>
     </head>
-    <body>
-        <div class="py-4 m-10 bg-red-500 p10 rounded-xl">Blue</div>
+    
+    <body class="bg-white dark:bg-black transition-colors duration-300 p-2 py-4">        
+            <button
+                class="absolute top-5 right-5 w-10 h-5 md:w-12 md:h-6 rounded-2xl bg-yellow-200 dark:bg-blue-600 flex items-center transition duration-300 focus:outline-none shadow dark:shadow-sky-500"
+                onclick="toggleTheme()">
+                <div
+                    id="switch-toggle"
+                    class="w-6 h-6 md:w-7 md:h-7 relative rounded-full transition duration-500 transform bg-yellow-500 dark:bg-blue-900 dark:translate-x-6 p-1 text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </div>
+            </button>  
+            <script src="{% static 'js/main.js' %}"></script> 
+            <div class="px-4 py-4 m-10 bg-red-500 p10 rounded-xl dark:bg-red-900 dark:text-white text-center">Red</div>
+            <div class="px-4 py-4 m-10 bg-blue-500 p10 rounded-xl dark:bg-blue-900 dark:text-white text-center">Blue</div>
+            <div class="px-4 py-4 m-10 bg-green-500 p10 rounded-xl dark:bg-green-900 dark:text-white text-center">Green</div>
+            <div class="px-4 py-4 m-10 bg-purple-500 p10 rounded-xl dark:bg-purple-900 dark:text-white text-center">Purple</div>
+            <div class="px-4 py-4 m-10 bg-yellow-500 p10 rounded-xl dark:bg-orange-500 dark:text-white text-center">Yellow</div>
+
+            <div class="absolute bg-gray-200 dark:bg-white p10 rounded-xl justify-around px-4 py-2">
+                <div hx-get="/admin/" hx-swap="outerHTML">ADMIN</div>
+            </div>
+
+            <script src="{% static 'js/htmx.min.js' %}"></script>
+        
     </body>
+    
 </html>
